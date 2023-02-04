@@ -15,5 +15,13 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        //Dim pressed button
+        sender.alpha = 0.5
+        //Bring pressed button back to original color after 0.2 second
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            sender.alpha = 1
+        }
+    }
 }
 
